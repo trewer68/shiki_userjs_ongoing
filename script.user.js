@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Подсчет онгоингов
 // @namespace    https://github.com/trewer68/shiki_userjs_ongoing
-// @version      1.2
+// @version      1.3
 // @description  Добавляет дополнительные кнопки и статистику по количеству серий на странице списков.
 // @author       trewer68
 // @license      MIT
@@ -41,6 +41,21 @@
         ap("Выйдет: ",max_series);
         al(hrefURL+"achievements","Достижения");
         al(hrefURL+"favorites","Избранное");
+        al(hrefURL+"history","История");
+        break;
+      case 'history':
+        al(hrefURL+"achievements","Достижения");
+        al(hrefURL+"favorites","Избранное");
+        al(hrefURL+"list/anime","Список");
+        break;
+      case 'achievements':
+        al(hrefURL+"list/anime","Список");
+        al(hrefURL+"favorites","Избранное");
+        al(hrefURL+"history","История");
+        break;
+      case 'favorites':
+        al(hrefURL+"achievements","Достижения");
+        al(hrefURL+"list/anime","Список");
         al(hrefURL+"history","История");
         break;
     }
